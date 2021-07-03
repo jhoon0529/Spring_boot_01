@@ -24,7 +24,7 @@ git config --global user.email "이메일"
 9. git commit -m "제목"	// Local 스테이지 커밋
 10. git push origin master	// Github 등록 (origin=remote name) (master=branch name)
 Username for 'https://github.com': 아이디
-Password for 'https://jhoon0529@github.com': 패스워드
+Password for 'https://아이디@github.com': 패스워드
 
  !!fatal: Could not read from remote repository. 에러시
 1) git remote -v // 리모트 확인
