@@ -1,27 +1,34 @@
 [GitHub Push]
 git --version
 git config --list 
-git config --global user.name "¾ÆÀÌµğ"
-git config --global user.email "ÀÌ¸ŞÀÏ"
+git config --global user.name "ì•„ì´ë””"
+git config --global user.email "ì´ë©”ì¼"
 
 
-1. Github ¿¡¼­ Repositorues »ı¼º / URL º¹»ç
-2. cd .. // Git µî·Ï Local folder·Î ÀÌµ¿
-3. mkdir [Æú´õ¸í] // Æú´õ »ı¼º
-4. git init // Git ÃÊ±âÈ­ (master ºê·£Ä¡ »ı¼º ¹× .git Æú´õ »ı¼º)
-   ls -al   // »ı¼º¿©ºÎ È®ÀÎ
-5. git status  // ÇöÀç »óÅÂÈ®ÀÎ(branch / stage /commit)
-6. git remote add origin [Repositories URLÁÖ¼Ò]    // ¸®¸ğÆ® µî·Ï
-7. git add [ÆÄÀÏ¸í.È®ÀåÀÚ]	// ½ºÅ×ÀÌÁö¿¡ ÆÄÀÏ ¿Ã¸®±â
-8. git status 		// µî·Ï È®ÀÎ
-9. git commit -m "Á¦¸ñ"	// Local ½ºÅ×ÀÌÁö Ä¿¹Ô
-10. git push origin master	// Github µî·Ï (origin=remote name) (master=branch name)
-Username for 'https://github.com': ¾ÆÀÌµğ
-Password for 'https://jhoon0529@github.com': ÆĞ½º¿öµå
 
- !!fatal: Could not read from remote repository. ¿¡·¯½Ã
-1) git remote -v // ¸®¸ğÆ® È®ÀÎ
-   git remote rm origin // ¸®¸ğÆ® »èÁ¦(origin=remote name)
-2) git remote set-url origin [https://github.com/ÁÖ¼Ò.git] //branch ÁÖ¼Ò url·Î ÀÔ·Â
-3) git push origin master // ´Ù½Ã push
+1. Github ì—ì„œ Repositorues ìƒì„± / URL ë³µì‚¬
+2. cd .. // Git ë“±ë¡ Local folderë¡œ ì´ë™
+3. mkdir [í´ë”ëª…] // í´ë” ìƒì„±
+   echo [íŒŒì¼ë‚´ìš©] > [íŒŒì¼ëª….í™•ì¥ì]	//íŒŒì¼ ìƒì„±
+   echo [íŒŒì¼ë‚´ìš©] >> [íŒŒì¼ëª….í™•ì¥ì]	//íŒŒì¼ ì—…ë°ì´íŠ¸
+   echo [*.í™•ì¥ì] >> .gitignore	//íŒŒì¼ ì œì™¸ í™•ì¥ì ë“±ë¡ ignore ìƒì„±
+
+
+4. git init // Git ì´ˆê¸°í™” (master ë¸Œëœì¹˜ ìƒì„± ë° .git í´ë” ìƒì„±)
+   ls -al   // ìƒì„±ì—¬ë¶€ í™•ì¸
+5. git status  // í˜„ì¬ ìƒíƒœí™•ì¸(branch / stage /commit)
+6. git remote add origin [Repositories URLì£¼ì†Œ]    // ë¦¬ëª¨íŠ¸ ë“±ë¡
+7. git add [íŒŒì¼ëª….í™•ì¥ì]	// ìŠ¤í…Œì´ì§€ì— íŒŒì¼ ì˜¬ë¦¬ê¸°
+   git add . 		// ìŠ¤í…Œì´ì§€ì— ì „ì²´ íŒŒì¼ ì˜¬ë¦¬ê¸° (*ignore ì„¤ì • í•„ìˆ˜)
+8. git status 		// ë“±ë¡ í™•ì¸
+9. git commit -m "ì œëª©"	// Local ìŠ¤í…Œì´ì§€ ì»¤ë°‹
+10. git push origin master	// Github ë“±ë¡ (origin=remote name) (master=branch name)
+Username for 'https://github.com': ì•„ì´ë””
+Password for 'https://jhoon0529@github.com': íŒ¨ìŠ¤ì›Œë“œ
+
+ !!fatal: Could not read from remote repository. ì—ëŸ¬ì‹œ
+1) git remote -v // ë¦¬ëª¨íŠ¸ í™•ì¸
+   git remote rm origin // ë¦¬ëª¨íŠ¸ ì‚­ì œ(origin=remote name)
+2) git remote set-url origin [https://github.com/ì£¼ì†Œ.git] //branch ì£¼ì†Œ urlë¡œ ì…ë ¥
+3) git push origin master // ë‹¤ì‹œ push
 
