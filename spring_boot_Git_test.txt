@@ -29,6 +29,7 @@ Password for 'https://jhoon0529@github.com': 패스워드
  !!fatal: Could not read from remote repository. 에러시
 1) git remote -v // 리모트 확인
    git remote rm origin // 리모트 삭제(origin=remote name)
-2) git remote set-url origin [https://github.com/주소.git] //branch 주소 url로 입력
+2) git remote set-url origin [https://github.com/주소.git] //주소 url로 입력(Repositories 변경)
+   git remote update origin --prune // 바뀐 Remote 주소 동기화
 3) git push origin master // 다시 push
 
