@@ -1,0 +1,59 @@
+[GitHub Push]
+git --version			//git 버전확인
+git config --list 			//git 설정 확인
+git config --global user.name "[아이디]"
+git config --global user.email "[이메일]"
+
+git config --global core.autocrlf true
+(window는 true, 줄바꿈 시 "\n" 로 통일 - autocrlf)
+저장시 "\r\n"에서 \r 삭제 하여 \n 만 전달, 받을 때는 \n만 받음
+
+cd [경로]		//.git 폴더가 생성된 위치로 가면 해당 remote 주소도 바뀜
+git [명령어] -h 	//도움말
+
+
+#### Alias 설정
+git config --global alias.[변수] [명령어]
+예) git config --global alias.st status
+     git st
+     git st -s (숏으로 줄여서 보기)
+---------------------------------------------------------------------------------------------------
+1. Github 에서 Repositorues 생성 / URL 복사
+2. cd .. // Git 등록 Local folder로 이동
+3. mkdir [폴더명] // 폴더 생성
+   echo [파일내용] > [파일명.확장자]	//파일 생성
+   echo [파일내용] >> [파일명.확장자]	//파일 업데이트
+   echo [*.확장자] >> .gitignore	//파일 제외 확장자 등록 ignore 생성
+   rm [파일명.확장자]		//파일 삭제
+(!! 참고: 파일 = *.txt , 폴더 = test/
+
+4. git init // Git 초기화 (master 브랜치 생성 및 .git 폴더 생성)
+   ls -al   // 생성여부 확인
+   rm -rf .git //.git 폴더 삭제 = git 연결 삭제
+
+5. git status  	// 현재 상태확인(branch / stage /commit) 
+   git status -s 	// 상태 정보 Short 확인
+   git diff		// 워킹 디렉토리 변경내용 확인
+   git diff --staged // 스테이지 내역 확인
+   git diff -- cached // --staged 와 동일
+
+6. git remote add origin [Repositories URL주소]    // 리모트 등록
+7. git add [파일명.확장자]	// 스테이지에 파일 올리기
+   git add . 		// 스테이지에 전체 파일 올리기 (*ignore 설정 필수)
+   git rm --cached * 	// 스테이지에서 내리기
+
+8. git status 		// 등록 확인
+   cat [파일명.확장자]	// 파일 내용 읽기
+9. git commit -m "제목"	// Local 스테이지 커밋
+   git commit -am "제목" 	// (전체) 커밋
+10. git push origin master	// Github 등록 (origin=remote name) (master=branch name)
+Username for 'https://github.com': 아이디
+Password for 'https://아이디@github.com': 패스워드
+
+ !!fatal: Could not read from remote repository. 에러시
+1) git remote -v // 리모트 확인
+   git remote rm origin // 리모트 삭제(origin=remote name)
+2) git remote set-url origin [https://github.com/주소.git] //주소 url로 입력(Repositories 변경)
+   git remote update origin --prune // 바뀐 Remote 주소 동기화
+3) git push origin master // 다시 push
+
