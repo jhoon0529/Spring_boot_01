@@ -31,6 +31,35 @@ git config --global alias.[변수] [명령어]
    ls -al   // 생성여부 확인
    rm -rf .git //.git 폴더 삭제 = git 연결 삭제
 
+  ##4-1. Branch 만들기 (git init 시 기본 master)
+           git branch 		//Branch List
+           git branch [branchname]	//Branch 생성
+           git branch -d [branchname]	//Branch 삭제
+           git push origin --delete  [branchname]      // Git 원격 Branch 삭제
+
+출처: https://ifuwanna.tistory.com/284 [IfUwanna IT]
+           git checkout [branch]	//Branch 지정_URI옆 <master>명이 변경됨
+	# git checkout -b <branch> //Branch 생성 및 지정
+  ##4-2. Branch 내용 Master로 병합(branch : commit 상태, git push 이전)
+           (#branch merge 병합)
+           git checkout [master]	//최종 병합 할 브랜치로 이동
+           git merge [branch]		//병합(merge) 대상 브랜치 이동
+           (#병합(merge) 되돌리기)
+           git checkout [master]
+           git reset --hard [bracnch]			//이전 작업 리셋
+	>파일 수정 후 git add 다시 등록 
+           git commit -m "제목"			//다시 commit
+           (#rebase 되돌리기)
+           git checkout [최종 commit branchname]	//branch 지정
+           git rebase [master]				//master 에서 이전 작업 리셋
+	>파일 수정 후 git add 다시 등록 
+           git rebase --continue			//rebase는 반드시 --contunue 할 것(commit 이 아님)
+           >git rebase --abort 				//rebase 구간을 취소
+           
+
+
+
+
 5. git status  	// 현재 상태확인(branch / stage /commit) 
    git status -s 	// 상태 정보 Short 확인
    git diff		// 워킹 디렉토리 변경내용 확인
@@ -45,6 +74,7 @@ git config --global alias.[변수] [명령어]
 !!* Commit 전 반드시 Pull 하기. (merge 과정)
 Repository가 다를 경우 강제 Pull 실행>>
 git pull origin (branchname) --allow-unrelated-histories
+
 
 
 8. git status 		// 등록 확인
