@@ -42,6 +42,11 @@ git config --global alias.[변수] [명령어]
    git add . 		// 스테이지에 전체 파일 올리기 (*ignore 설정 필수)
    git rm --cached * 	// 스테이지에서 내리기
 
+!!* Commit 전 반드시 Pull 하기. (merge 과정)
+Repository가 다를 경우 강제 Pull 실행>>
+git pull origin (branchname) --allow-unrelated-histories
+
+
 8. git status 		// 등록 확인
    cat [파일명.확장자]	// 파일 내용 읽기
 9. git commit -m "제목"	// Local 스테이지 커밋
