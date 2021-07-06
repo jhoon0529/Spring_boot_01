@@ -26,18 +26,17 @@ git config --global alias.[변수] [명령어]
    echo [*.확장자] >> .gitignore	//파일 제외 확장자 등록 ignore 생성
    rm [파일명.확장자]		//파일 삭제
 (!! 참고: 파일 = *.txt , 폴더 = test/
-
+---------------------------------------------------------------------------------------------------
 4. git init // Git 초기화 (master 브랜치 생성 및 .git 폴더 생성)
    ls -al   // 생성여부 확인
    rm -rf .git //.git 폴더 삭제 = git 연결 삭제
-
+---------------------------------------------------------------------------------------------------
   ##4-1. Branch 만들기 (git init 시 기본 master)
            git branch 		//Branch List
            git branch [branchname]	//Branch 생성
            git branch -d [branchname]	//Branch 삭제
            git push origin --delete  [branchname]      // Git 원격 Branch 삭제
 
-출처: https://ifuwanna.tistory.com/284 [IfUwanna IT]
            git checkout [branch]	//Branch 지정_URI옆 <master>명이 변경됨
 	# git checkout -b <branch> //Branch 생성 및 지정
   ##4-2. Branch 내용 Master로 병합(branch : commit 상태, git push 이전)
@@ -57,9 +56,7 @@ git config --global alias.[변수] [명령어]
            >git rebase --abort 				//rebase 구간을 취소
            
 
-
-
-
+---------------------------------------------------------------------------------------------------
 5. git status  	// 현재 상태확인(branch / stage /commit) 
    git status -s 	// 상태 정보 Short 확인
    git diff		// 워킹 디렉토리 변경내용 확인
@@ -76,11 +73,12 @@ Repository가 다를 경우 강제 Pull 실행>>
 git pull origin (branchname) --allow-unrelated-histories
 
 
-
+---------------------------------------------------------------------------------------------------
 8. git status 		// 등록 확인
    cat [파일명.확장자]	// 파일 내용 읽기
 9. git commit -m "제목"	// Local 스테이지 커밋
    git commit -am "제목" 	// (전체) 커밋
+---------------------------------------------------------------------------------------------------
 10. git push origin master	// Github 등록 (origin=remote name) (master=branch name)
 Username for 'https://github.com': 아이디
 Password for 'https://아이디@github.com': 패스워드
